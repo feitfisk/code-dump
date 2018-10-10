@@ -2,6 +2,7 @@ import click
 import random
 
 def beta_convert(b, n):
+    """Returns given n in b number system"""
     if b is 2:
         return bin(n)
     elif b is 8:
@@ -13,6 +14,10 @@ def beta_convert(b, n):
 
 @click.command()
 def from_to():
+    """Generates a random number in two different
+    number systems and quizzes the user about the 
+    conversion between those two. 
+    """
     betas = [2, 8, 10, 16]
     beta = random.choice(betas)
     beta_2 = random.choice(betas)
